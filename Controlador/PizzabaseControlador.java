@@ -8,7 +8,7 @@ package Controlador;
 import Persistencia.Conexion;
 import Persistencia.PizzabaseJpaController;
 import Modelo.Pizzabase;
-import Vista.Vista_Administrador;
+import Vista.Vista_Administrador1;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,16 +20,17 @@ public class PizzabaseControlador {
     
     private Conexion conn;
     private PizzabaseJpaController pbc;
-    private Vista_Administrador vistaAdmin;
+    private Vista_Administrador1 vistaAdmin;
     
-    public PizzabaseControlador(Vista_Administrador ven){
+    public PizzabaseControlador(Vista_Administrador1 ven){
         conn = new Conexion();
         pbc = new PizzabaseJpaController(conn.getConn());
         vistaAdmin = ven;
     }
     
-    public boolean IngresarPizzabase(Integer pizzaId, String nombre, String tamanio, String presentacion, double precio){
+    public boolean IngresarPizzabase(byte[] foto, Integer pizzaId, String nombre, String tamanio, String presentacion, double precio){
         Pizzabase nuevaPizzabase = new Pizzabase(pizzaId, nombre, tamanio, presentacion, precio);
+        nuevaPizzabase.setFoto(foto);
         
         boolean result = false;
         
@@ -41,8 +42,13 @@ public class PizzabaseControlador {
             Logger.getLogger(PizzabaseControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        if (result){
+            System.out.print("TRUE METODO IngresarPizzabase()");
+        }
+        
         return result;
     }
+
     
     // Sin indicar el id
 //    public boolean IngresarPizzabase(String nombre, String tamanio, String presentacion, double precio){
@@ -51,6 +57,10 @@ public class PizzabaseControlador {
 //        
 //    }
 //    
+
+    public void setImagen(byte[] buffer) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

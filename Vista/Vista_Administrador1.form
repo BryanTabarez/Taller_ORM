@@ -80,7 +80,6 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jl_id" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jl_nombre" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -89,7 +88,6 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jt_id" max="32767" attributes="0"/>
                                       <Component id="jt_nombre" max="32767" attributes="0"/>
                                       <Component id="jc_tamano" max="32767" attributes="0"/>
                                       <Component id="jt_buscar" alignment="0" max="32767" attributes="0"/>
@@ -137,9 +135,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jl_id" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jl_presentacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jt_id" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jc_presentacion" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
@@ -175,11 +171,6 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jl_id">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Pizza ID:"/>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jl_nombre">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nombre:"/>
@@ -204,8 +195,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Foto:"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jt_id">
                 </Component>
                 <Component class="javax.swing.JTextField" name="jt_nombre">
                 </Component>
@@ -250,6 +239,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ingresar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jb_ingresarActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jb_eliminar">
                   <Properties>

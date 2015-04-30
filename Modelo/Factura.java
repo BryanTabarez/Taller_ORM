@@ -49,7 +49,7 @@ public class Factura implements Serializable {
     private Date fecha;
     @Basic(optional = false)
     @Column(nullable = false)
-    private double preciototal;
+    private int preciototal;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "facturaId")
     private Collection<Itempedido> itempedidoCollection;
 
@@ -60,7 +60,7 @@ public class Factura implements Serializable {
         this.facturaId = facturaId;
     }
 
-    public Factura(Integer facturaId, Date fecha, double preciototal) {
+    public Factura(Integer facturaId, Date fecha, int preciototal) {
         this.facturaId = facturaId;
         this.fecha = fecha;
         this.preciototal = preciototal;
@@ -82,11 +82,11 @@ public class Factura implements Serializable {
         this.fecha = fecha;
     }
 
-    public double getPreciototal() {
+    public int getPreciototal() {
         return preciototal;
     }
 
-    public void setPreciototal(double preciototal) {
+    public void setPreciototal(int preciototal) {
         this.preciototal = preciototal;
     }
 

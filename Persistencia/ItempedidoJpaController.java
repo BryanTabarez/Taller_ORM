@@ -5,8 +5,6 @@
  */
 package Persistencia;
 
-import Controlador.exceptions.NonexistentEntityException;
-import Controlador.exceptions.PreexistingEntityException;
 import java.io.Serializable;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
@@ -17,6 +15,8 @@ import Modelo.Ingredienteadicional;
 import Modelo.Factura;
 import Modelo.Itempedido;
 import Modelo.ItempedidoPK;
+import Persistencia.exceptions.NonexistentEntityException;
+import Persistencia.exceptions.PreexistingEntityException;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

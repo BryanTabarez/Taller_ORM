@@ -5,8 +5,8 @@
  */
 package Persistencia;
 
-import Controlador.exceptions.NonexistentEntityException;
 import Modelo.Vegetal;
+import Persistencia.exceptions.NonexistentEntityException;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;

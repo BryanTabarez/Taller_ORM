@@ -74,13 +74,6 @@ public class Pizzabase implements Serializable {
         this.presentacion = presentacion;
         this.precio = precio;
     }
-    
-    public Pizzabase(String nombre, String tamanio, String presentacion, double precio) {
-        this.nombre = nombre;
-        this.tamanio = tamanio;
-        this.presentacion = presentacion;
-        this.precio = precio;
-    }
 
     public Integer getPizzaId() {
         return pizzaId;
